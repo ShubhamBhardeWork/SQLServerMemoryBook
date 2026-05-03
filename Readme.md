@@ -40,3 +40,23 @@ FROM sys.tables;
 1. TCL (Transaction Control Language)
     - [COMMIT, ROLLBACK, BEGIN TRANSACTION]
 
+
+
+### Create the database
+```sql
+CREATE DATABASE <dbName>;
+
+-- example
+CREATE DATABASE TestDb;
+```
+
+### Drop the database
+```sql
+DROP DATABASE <dbName>;
+
+-- ⚠️ Safe version (real world):
+DROP DATABASE IF EXISTS TestDb;
+
+-- example
+DROP DATABASE IF EXISTS TestDb;
+```

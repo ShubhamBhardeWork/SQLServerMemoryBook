@@ -22,3 +22,21 @@ FROM sys.tables;
 -- (MySQL)
 -- SHOW TABLES;
 ```
+
+
+## SQL Commands:-
+1. DDL (Data Definition Language)
+    - [CREATE, ALTER, DROP, TRUNCATE]
+
+1. DML (Data Manipulation Language)
+    - [INSERT, UPDATE, DELETE]
+
+1. DQL (Data Query Language)
+    - [SELECT]
+
+1. DCL (Data Control Language)
+    - [GRANT, REVOKE]
+
+1. TCL (Transaction Control Language)
+    - [COMMIT, ROLLBACK, BEGIN TRANSACTION]
+

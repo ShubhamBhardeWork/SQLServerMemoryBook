@@ -23,6 +23,13 @@ FROM sys.tables;
 -- SHOW TABLES;
 ```
 
+### Switch to Another Database:-
+```sql
+USE <dbName>;
+
+-- example
+USE TestDb;
+```
 
 ## SQL Commands:-
 1. DDL (Data Definition Language)
@@ -54,8 +61,8 @@ CREATE DATABASE TestDb;
 ```sql
 DROP DATABASE <dbName>;
 
--- ⚠️ Safe version (real world):
-DROP DATABASE IF EXISTS TestDb;
+-- ⚠️ Safe version 
+DROP DATABASE IF EXISTS <dbName>;
 
 -- example
 DROP DATABASE IF EXISTS TestDb;

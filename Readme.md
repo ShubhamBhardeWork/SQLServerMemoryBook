@@ -2,7 +2,7 @@
 
 ## Pre-Requisites:-
 1. Download & Install Microsoft SQL Server → DB engine
-1. SSMS (SQL Server Management Studio) → UI tool
+1. SSMS (SQL Server Management Studio) → GUI (Graphical User Interface) tool
 
 
 ### List of All Databases
@@ -41,6 +41,15 @@ USE TestDb;
 1. DATETIME
 1. BIT
 1. UNIQUEIDENTIFIER (GUID)
+
+## Constraints
+1. NOT NULL
+1. DEFAULT
+1. CHECK
+1. UNIQUE
+1. PRIMARY KEY
+1. FORIEGN KEY  
+
 
 ## SQL Commands:-
 1. DDL (Data Definition Language)
@@ -87,7 +96,7 @@ CREATE TABLE <tableName>
 -- example
 CREATE TABLE Employees
 (
-    Id INT NOT NULL IDENTITY(1,1),
+    Id INT IDENTITY(1,1) NOT NULL,
     Name VARCHAR(20) NOT NULL,
     Email VARCHAR(50) NOT NULL UNIQUE,
     Gender VARCHAR(10) CHECK (Gender IN ('Male', 'Female', 'Other')), -- optional
@@ -132,7 +141,7 @@ VALUES
 INSERT INTO Employees
 (Name, Email, Salary)
 VALUES
-('Shubham', 'shubhambharde98@gmail.com', 36000),
+('Shubham', 'shubham@gmail.com', 23000),
 ('Pranav', 'pb@gmail.com', 17000),
 ('Rohit', 'rohit@gmail.com', 28000);
 ```

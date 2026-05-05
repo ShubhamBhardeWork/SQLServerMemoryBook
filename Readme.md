@@ -93,3 +93,35 @@ DROP TABLE <tableName>;
 DROP TABLE Employees;
 DROP TABLE IF EXISTS Employees; -- safe version
 ```
+
+### Insert data into the table
+```sql
+INSERT INTO <tableName>
+(<col1>, <col2>, <col3>)
+VALUES
+(<value1>, <value2>, <value3>);
+
+-- example
+INSERT INTO Employees
+(Name, Email, Salary)
+VALUES
+('Shubham', 'shubhambharde98@gmail.com', 36000);
+```
+
+### Insert Multiple data into the table
+```sql
+INSERT INTO <tableName>
+(<col1>, <col2>, <col3>)
+VALUES
+(<value1>, <value2>, <value3>),
+(<value1>, <value2>, <value3>),
+(<value1>, <value2>, <value3>);
+
+-- example
+INSERT INTO Employees
+(Name, Email, Salary)
+VALUES
+('Shubham', 'shubhambharde98@gmail.com', 36000),
+('Pranav', 'pb@gmail.com', 17000),
+('Rohit', 'rohit@gmail.com', 28000);
+```

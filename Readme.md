@@ -61,9 +61,35 @@ CREATE DATABASE TestDb;
 ```sql
 DROP DATABASE <dbName>;
 
--- ⚠️ Safe version 
+-- Safe version ✅
 DROP DATABASE IF EXISTS <dbName>;
 
 -- example
 DROP DATABASE IF EXISTS TestDb;
+```
+
+### Create the table
+```sql
+CREATE TABLE <tableName>
+(<columnName> <type> <constraint>);
+
+-- example
+CREATE TABLE Employees
+(
+    Id INT NOT NULL IDENTITY(1,1),
+    Name VARCHAR(20) NOT NULL,
+    Email VARCHAR(50) NOT NULL UNIQUE,
+    Gender VARCHAR(10) CHECK (Gender IN ('Male', 'Female', 'Other')), -- optional
+    Salary DECIMAL(10,2) NOT NULL,
+    CONSTRAINT pk_employees PRIMARY KEY(Id) 
+)
+```
+
+### Drop the table
+```sql
+DROP TABLE <tableName>;
+
+--example
+DROP TABLE Employees;
+DROP TABLE IF EXISTS Employees; -- safe version
 ```

@@ -30,6 +30,17 @@ USE <dbName>;
 -- example
 USE TestDb;
 ```
+## Data types 
+1. INT
+1. BIGINT
+1. FLOAT
+1. VARCHAR( n ) & NVARCHAR( n )
+1. DECIMAL
+1. DATE
+1. TIME
+1. DATETIME
+1. BIT
+1. UNIQUEIDENTIFIER (GUID)
 
 ## SQL Commands:-
 1. DDL (Data Definition Language)

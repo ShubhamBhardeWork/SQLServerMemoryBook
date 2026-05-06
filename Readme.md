@@ -90,6 +90,13 @@ USE TestDb;
 1. ORDER BY
 1. TOP / LIMIT
 
+## Aggregation Functions:-
+1. SUM()
+1. COUNT()
+1. AVG()
+1. MAX()
+1. MIN()
+
 ### Create the database
 ```sql
 CREATE DATABASE <dbName>;

@@ -48,7 +48,7 @@ USE TestDb;
 1. CHECK
 1. UNIQUE
 1. PRIMARY KEY
-1. FORIEGN KEY  
+1. FOREIGN KEY  
 
 
 ## SQL Commands:-
@@ -90,7 +90,7 @@ USE TestDb;
 1. ORDER BY
 1. TOP / LIMIT
 
-## Aggregation Functions:-
+## Aggregate Functions:-
 1. SUM()
 1. COUNT()
 1. AVG()

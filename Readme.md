@@ -68,6 +68,27 @@ USE TestDb;
     - [COMMIT, ROLLBACK, BEGIN TRANSACTION]
 
 
+## Clauses:-
+1. SELECT
+1. DISTINCT 
+1. FROM
+1. JOIN
+1. WHERE
+1. GROUP BY
+1. HAVING
+1. ORDER BY
+1. TOP / LIMIT 
+
+## Execution Order
+1. FROM
+1. JOIN
+1. WHERE
+1. GROUP BY
+1. HAVING
+1. SELECT
+1. DISTINCT
+1. ORDER BY
+1. TOP / LIMIT
 
 ### Create the database
 ```sql

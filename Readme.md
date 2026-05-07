@@ -249,3 +249,13 @@ ADD <columnName> <type> <constraint>;
 ALTER TABLE Employees
 ADD City VARCHAR(20) DEFAULT 'NotMention';
 ```
+
+### Drop Column :- 
+```sql
+ALTER TABLE <tableName>
+DROP COLUMN <columnName>;
+
+-- example
+ALTER TABLE Employees
+DROP COLUMN City;
+```

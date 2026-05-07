@@ -276,3 +276,19 @@ ALTER COLUMN Name VARCHAR(50) NOT NULL;
     2] while altering constraints using ALTER COLUMN, you usually need to specify the datatype again.
 */
 ```
+
+### Rename the Table 
+```sql
+EXEC sp_rename '<oldTableName>', '<newTableName>';
+
+-- example
+EXEC sp_rename 'Employees', 'EmployeesTable';
+```
+
+### Rename the Column Name 
+```sql
+EXEC sp_rename '<tableName.oldColumnName>', '<newColumnName>', 'COLUMN';
+
+-- example
+EXEC sp_rename 'Employees.Name', 'FullName', 'COLUMN'; 
+```

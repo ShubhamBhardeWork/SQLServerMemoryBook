@@ -109,7 +109,8 @@ Id INT IDENTITY(1,1)
 1. MAX()
 1. MIN()
 
-### Create the database
+
+### Create the Database
 ```sql
 CREATE DATABASE <dbName>;
 
@@ -117,18 +118,7 @@ CREATE DATABASE <dbName>;
 CREATE DATABASE TestDb;
 ```
 
-### Drop the database
-```sql
-DROP DATABASE <dbName>;
-
--- Safe version ✅
-DROP DATABASE IF EXISTS <dbName>;
-
--- example
-DROP DATABASE IF EXISTS TestDb;
-```
-
-### Create the table
+### Create the Table
 ```sql
 CREATE TABLE <tableName>
 (<columnName> <type> <constraint>);
@@ -153,6 +143,38 @@ FROM <tableName>;
 -- example
 SELECT *
 FROM Employees;
+```
+
+### Insert Data into the Table (Manually)
+```sql
+INSERT INTO <tableName>
+(<col1>, <col2>, <col3>)
+VALUES
+(<value1>, <value2>, <value3>);
+
+-- example
+INSERT INTO Employees
+(Name, Email, Salary)
+VALUES
+('Shubham', 'shubhambharde98@gmail.com', 36000);
+```
+
+### Insert Multiple Data into the Table (Manually)
+```sql
+INSERT INTO <tableName>
+(<col1>, <col2>, <col3>)
+VALUES
+(<value1>, <value2>, <value3>),
+(<value1>, <value2>, <value3>),
+(<value1>, <value2>, <value3>);
+
+-- example
+INSERT INTO Employees
+(Name, Email, Salary)
+VALUES
+('Shubham', 'shubham@gmail.com', 23000),
+('Pranav', 'pb@gmail.com', 17000),
+('Rohit', 'rohit@gmail.com', 28000);
 ```
 
 ### Update the Data/Row
@@ -197,47 +219,6 @@ TRUNCATE TABLE Employees;
     3] Resets IDENTITY counter
     4] Cannot truncate table referenced by FOREIGN KEY
 */
-```
-
-### Drop the table
-```sql
-DROP TABLE <tableName>;
-
---example
-DROP TABLE Employees;
-DROP TABLE IF EXISTS Employees; -- safe version
-```
-
-### Insert data into the table
-```sql
-INSERT INTO <tableName>
-(<col1>, <col2>, <col3>)
-VALUES
-(<value1>, <value2>, <value3>);
-
--- example
-INSERT INTO Employees
-(Name, Email, Salary)
-VALUES
-('Shubham', 'shubhambharde98@gmail.com', 36000);
-```
-
-### Insert Multiple data into the table
-```sql
-INSERT INTO <tableName>
-(<col1>, <col2>, <col3>)
-VALUES
-(<value1>, <value2>, <value3>),
-(<value1>, <value2>, <value3>),
-(<value1>, <value2>, <value3>);
-
--- example
-INSERT INTO Employees
-(Name, Email, Salary)
-VALUES
-('Shubham', 'shubham@gmail.com', 23000),
-('Pranav', 'pb@gmail.com', 17000),
-('Rohit', 'rohit@gmail.com', 28000);
 ```
 
 ### Add New Column:- 
@@ -291,4 +272,24 @@ EXEC sp_rename '<tableName.oldColumnName>', '<newColumnName>', 'COLUMN';
 
 -- example
 EXEC sp_rename 'Employees.Name', 'FullName', 'COLUMN'; 
+```
+
+### Drop the Table
+```sql
+DROP TABLE <tableName>;
+
+--example
+DROP TABLE Employees;
+DROP TABLE IF EXISTS Employees; -- safe version
+```
+
+### Drop the Database
+```sql
+DROP DATABASE <dbName>;
+
+-- Safe version ✅
+DROP DATABASE IF EXISTS <dbName>;
+
+-- example
+DROP DATABASE IF EXISTS TestDb;
 ```

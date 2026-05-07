@@ -239,3 +239,13 @@ VALUES
 ('Pranav', 'pb@gmail.com', 17000),
 ('Rohit', 'rohit@gmail.com', 28000);
 ```
+
+### Add New Column:- 
+```sql
+ALTER TABLE <tableName>
+ADD <columnName> <type> <constraint>;
+
+-- example
+ALTER TABLE Employees
+ADD City VARCHAR(20) DEFAULT 'NotMention';
+```

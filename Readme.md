@@ -51,6 +51,18 @@ USE TestDb;
 1. FOREIGN KEY  
 
 
+## Identity Property:-
+- Auto increment property.
+- Not a constraint.
+
+```sql
+IDENTITY(seed, increment)
+
+-- example
+Id INT IDENTITY(1,1)
+```
+
+
 ## SQL Commands:-
 1. DDL (Data Definition Language)
     - [CREATE, ALTER, DROP, TRUNCATE]

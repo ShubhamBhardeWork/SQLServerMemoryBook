@@ -155,6 +155,23 @@ SELECT *
 FROM Employees;
 ```
 
+### Update the Data/Row
+```sql
+UPDATE <tableName>
+SET <columnName> = <value>, 
+    <columnName2> = <value>
+WHERE <condition>;
+
+-- example
+UPDATE Employees
+SET 
+    Name = 'Updated Name', 
+    Salary = 72000
+WHERE Id = 6;
+
+-- NOTE:- Without WHERE clause, all rows will be updated/deleted.
+```
+
 ### Drop the table
 ```sql
 DROP TABLE <tableName>;

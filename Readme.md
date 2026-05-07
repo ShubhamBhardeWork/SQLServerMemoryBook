@@ -172,6 +172,18 @@ WHERE Id = 6;
 -- NOTE:- Without WHERE clause, all rows will be updated/deleted.
 ```
 
+### Delete the Specific Data/Row
+```sql
+DELETE FROM <tableName>
+WHERE <condition>; 
+
+-- example
+DELETE FROM Employees
+WHERE Id = 6;
+
+-- NOTE:- Without WHERE clause, all rows will be updated/deleted.
+```
+
 ### Drop the table
 ```sql
 DROP TABLE <tableName>;

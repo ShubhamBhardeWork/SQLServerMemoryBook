@@ -184,6 +184,21 @@ WHERE Id = 6;
 -- NOTE:- Without WHERE clause, all rows will be updated/deleted.
 ```
 
+### Delete All Data/Rows
+```sql
+TRUNCATE TABLE <tableName>;
+
+-- example
+TRUNCATE TABLE Employees;
+
+/* NOTE:-   
+    1] Deletes all rows quickly/Fast
+    2] Cannot use WHERE
+    3] Resets IDENTITY counter
+    4] Cannot truncate table referenced by FOREIGN KEY
+*/
+```
+
 ### Drop the table
 ```sql
 DROP TABLE <tableName>;

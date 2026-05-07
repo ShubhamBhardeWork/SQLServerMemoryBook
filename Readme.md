@@ -259,3 +259,20 @@ DROP COLUMN <columnName>;
 ALTER TABLE Employees
 DROP COLUMN City;
 ```
+
+### Modify Column Type or Constraint:-
+```sql
+ALTER TABLE <tableName>
+ALTER COLUMN <columnName> <type> <constraint>;
+
+-- example
+ALTER TABLE Employees
+ALTER COLUMN Name VARCHAR(50) NOT NULL;
+
+
+/* NOTE:-
+    1]  While altering a column, some changes may require redefining related constraints separately.
+
+    2] while altering constraints using ALTER COLUMN, you usually need to specify the datatype again.
+*/
+```

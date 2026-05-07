@@ -145,6 +145,16 @@ CREATE TABLE Employees
 )
 ```
 
+### Retrieve/Read All Data
+```sql
+SELECT * 
+FROM <tableName>;
+
+-- example
+SELECT *
+FROM Employees;
+```
+
 ### Drop the table
 ```sql
 DROP TABLE <tableName>;

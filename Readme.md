@@ -128,6 +128,18 @@ Id INT IDENTITY(1,1)
     [&, `, ^]
 ```
 
+## Comment:-
+```sql
+-- this is single line comment
+
+/* 
+    this is
+        multiple line
+    comment.
+            Thanks!
+*/
+```
+
 ## Aggregate Functions:-
 1. SUM()
 1. COUNT()

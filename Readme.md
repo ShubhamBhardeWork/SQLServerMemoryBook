@@ -319,3 +319,21 @@ DROP DATABASE IF EXISTS <dbName>;
 -- example
 DROP DATABASE IF EXISTS TestDb;
 ```
+
+## Select Static/Constant Values:-
+- Static/Constant values are fixed values written directly inside the SELECT statement.
+- These values are not fetched from any table.
+- 'AS' keyword is used to give an alias/custom column name to the output. 
+- Returning custom messages
+
+```sql
+SELECT 'Shubham' AS my_name;
+SELECT 18 AS age;
+SELECT 'New Customer' AS type_of_customer;
+
+SELECT 
+    Name,
+    'Active Employee' AS status
+FROM Employees;
+```
+

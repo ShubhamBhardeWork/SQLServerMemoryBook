@@ -102,6 +102,32 @@ Id INT IDENTITY(1,1)
 1. ORDER BY
 1. TOP / LIMIT
 
+## Operators:-
+```sh
+1] Arithmetic Operator:- 
+    [+, -, *, /, %]
+
+2] Comparison / Relational Operators:-
+    [=, !=, <, <=, >, >=]
+
+3] Logical Operators:-
+    1. AND :- must all conditions true then true.
+    2. OR:- atleast one condition true then true.
+    3. NOT:- reverse the condition.
+
+4] Special Operators:-
+    1. IN (Membership operator):- Matches multiple values 
+    2. BETWEEN:- Range check & inclusive boundry values.
+    3. LIKE:- Pattern matching
+    4. IS NULL:- Check NULL
+    5. EXISTS:- Checks subquery existence
+    6. ANY:- Compare with any value
+    7. ALL:- Compare with all values
+
+5] Bitwise Operators:-
+    [&, `, ^]
+```
+
 ## Aggregate Functions:-
 1. SUM()
 1. COUNT()

@@ -147,6 +147,15 @@ Id INT IDENTITY(1,1)
 1. MAX()
 1. MIN()
 
+## String Functions:-
+1. LEN()
+1. UPPER()
+1. LOWER()
+1. TRIM()
+1. SUBSTRING()
+1. REPLACE()
+
+
 
 ### Create the Database
 ```sql

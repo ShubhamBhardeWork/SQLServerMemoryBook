@@ -366,3 +366,99 @@ SELECT
 FROM Employees;
 ```
 
+
+
+## Hands-On Practice
+```sql
+-- 1] Create a TestDB database
+CREATE DATABASE TestDB;
+
+
+-- 2] switch to TestDB database
+USE TestDB;
+
+
+/*
+3] Create a new table called Persons with columns:-
+id, person_name, birth_date & phone
+*/
+CREATE TABLE Persons
+(
+    id BIGINT NOT NULL,
+    person_name VARCHAR(50) NOT NULL,
+    birth_date DATE,
+    phone VARCHAR(13) NOT NULL,
+
+    CONSTRAINT pk_persons PRIMARY KEY (id)
+)
+
+
+-- 4] In existing Persons table add a new column called 'email'.
+ALTER TABLE Persons
+ADD email VARCHAR(50) NOT NULL UNIQUE;
+
+
+-- 5] Remove the column phone from Persons table
+ALTER TABLE Persons
+DROP COLUMN phone;
+
+
+-- 6] Delete the table Persons from database
+DROP TABLE Persons;
+
+
+-- 7] Delete all rows/data from Persons table.
+TRUNCATE TABLE Persons;
+
+
+-- 8] Insert multiple data in Persons table. (Manual way)
+INSERT INTO Persons
+(id, person_name, birth_date, phone)
+VALUES
+(1, 'Shubham', NULL, '9130287682') ,
+(2, 'Pranav', NULL, '7234867954'),
+(3, 'Rohit', NULL, '9004236526');
+
+
+-- 9] Copy data from 'Persons' table into 'Customers'
+-- OR Insert data from 'Persons' table into 'Customers'.
+INSERT INTO Customers
+(id, customer_name, mob_number, customer_type)
+SELECT 
+    id, 
+    person_name,
+    phone, 
+    'New'
+FROM Persons;
+
+
+-- 10] Change the score of customer with ID 4 to 0.
+UPDATE Customers
+SET score = 0
+WHERE id = 4;
+
+
+-- 11] Change the score of customer with ID 10 to 0 & update the country to 'UK'
+UPDATE Customers
+SET 
+    score = 0,
+    country = 'UK'
+WHERE id = 10;
+
+
+-- 12] Update all customers with a Null score by setting their score to 0
+UPDATE Customers
+SET score = 0
+WHERE score IS NULL;
+
+
+-- 13] Delete all customers with an Id > 5
+DELETE FROM Customers
+WHERE id > 5;
+
+
+-- 14] Delete all data/rows from the Persons table
+TRUNCATE TABLE Persons -- faster ✅
+
+DELETE FROM Persons; -- slower ❌ 
+```

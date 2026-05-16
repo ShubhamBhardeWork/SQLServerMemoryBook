@@ -155,6 +155,14 @@ Id INT IDENTITY(1,1)
 1. SUBSTRING()
 1. REPLACE()
 
+## Date Functions:-
+1. GETDATE()
+1. DATEDIFF()
+1. DATEADD()
+1. YEAR()
+1. MONTH()
+1. DAY()
+
 
 
 ### Create the Database

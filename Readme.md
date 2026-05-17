@@ -206,6 +206,21 @@ Id INT IDENTITY(1,1)
 1. Composite Index
 1. Unique Index
 
+### Clustered Index:-
+- Stores data physically in sorted order.
+- One table can have only ONE clustered index.
+- ⚠️ **Primary Key creates Clustered Index by default.**
+
+```sql
+CREATE CLUSTERED INDEX idx_tableName_columnName
+ON tableName( columnName );
+
+-- example
+CREATE CLUSTERED INDEX idx_employees_id
+ON Employees(id);
+```
+
+
 ### Create the Database
 ```sql
 CREATE DATABASE <dbName>;

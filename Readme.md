@@ -163,6 +163,14 @@ Id INT IDENTITY(1,1)
 1. MONTH()
 1. DAY()
 
+## What is Index:-
+- Index is a database object used to improve the speed of data retrieval operations in a table.
+
+- It works like a book index → helps SQL Server find data faster.
+
+- Without index, SQL Server performs full table scan.
+
+- Instead of scanning the entire table, SQL Server uses the index to quickly locate required rows.
 
 
 ### Create the Database

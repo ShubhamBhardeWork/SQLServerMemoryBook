@@ -188,6 +188,17 @@ Id INT IDENTITY(1,1)
 - `INSERT`, `UPDATE`, `DELETE` become slower
 - Too many indexes reduce performance
 
+### When to Create Indexes?
+- Frequently searched columns
+- `WHERE` clause columns
+- `JOIN` columns
+- `ORDER BY` columns
+- Frequently used foreign keys
+
+### When NOT to Use Indexes?
+- Small tables
+- Frequently updated columns
+- Columns with many duplicate values
 
 ### Create the Database
 ```sql

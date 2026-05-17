@@ -200,6 +200,12 @@ Id INT IDENTITY(1,1)
 - Frequently updated columns
 - Columns with many duplicate values
 
+## Index Types:-
+1. Clustered Index 
+1. Nonclustered Index 
+1. Composite Index
+1. Unique Index
+
 ### Create the Database
 ```sql
 CREATE DATABASE <dbName>;

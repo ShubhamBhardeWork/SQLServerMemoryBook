@@ -461,4 +461,115 @@ WHERE id > 5;
 TRUNCATE TABLE Persons -- faster ✅
 
 DELETE FROM Persons; -- slower ❌ 
+
+
+-- 15] Delete the TestDB database
+DROP DATABASE TestDB;
+
+
+-- 16] Retrieve all customers data
+SELECT *
+FROM Customers;
+
+
+-- 17] Retrieve each customers name, country & score
+SELECT 
+    name,
+    country,
+    score
+FROM Customers;
+
+
+-- 18] Retrieve customers with a score not equal to 0.
+SELECT *
+FROM Customers
+WHERE score != 0;
+
+
+-- 19] Retrieve customers from Germany & Sort by score.
+SELECT *
+FROM Customers
+WHERE country = 'Germany'
+ORDER BY score ASC; 
+
+
+-- 20] Retrieve all customers & sort results by the highest score first.
+SELECT *
+FROM Customers
+ORDER BY score DESC; 
+
+
+-- 21] Retrieve customers & sort results by the country & then by the highest score.
+SELECT *
+FROM Customers
+ORDER BY 
+    country ASC, 
+    score DESC;
+
+
+-- 22] Find the total_score for each country
+SELECT
+    country,
+    SUM(score) AS total_score
+FROM Customers
+GROUP BY country;
+
+
+-- 23] Find the total_score & total_number of customers for each country.
+SELECT 
+    country,
+    SUM(score) AS total_score,
+    COUNT(*) AS total_number_of_customers
+FROM Customers
+GROUP BY country;
+
+
+-- 24] Find the average score for each country considering only customers with a score not eqal to 0.
+-- And return only those countries with an average score greater than 430.
+SELECT 
+    country,
+    AVG(score) AS average_score
+FROM Customers
+WHERE score != 0
+GROUP BY country
+HAVING AVG(score) > 430;
+
+
+-- 25] Return unique list of all countries from Customers.
+SELECT DISTINCT country
+FROM Customers;
+
+
+-- 26] Retrieve only 3 customers
+SELECT TOP 3 *
+FROM Customers;
+
+
+-- 27] Retrieve top 3 customers with highest score.
+SELECT TOP 3 *
+FROM Customers
+ORDER BY score DESC;
+
+
+-- 28] Retrieve lowest 2 customers based on the score.
+SELECT TOP 2 *
+FROM Customers
+ORDER BY score ASC;
+
+
+-- 29] get the 2 most recent orders from orders.
+SELECT TOP 2 *
+FROM Orders
+ORDER BY order_date DESC;
+
+
+-- 30] Retrieve all customers who are not from Germany.
+SELECT *
+FROM Customers
+WHERE country != 'Germany';
+
+-- another way
+SELECT *
+FROM Customers
+WHERE NOT country = 'Germany';
 ```

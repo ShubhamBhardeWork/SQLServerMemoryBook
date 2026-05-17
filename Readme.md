@@ -234,6 +234,23 @@ ON Employees(name);
 ```
 
 
+### Composite Index:-
+- Index created on multiple columns.
+- Used when query searches using multiple columns together.
+
+```sql
+CREATE INDEX idx_emp_name_city
+ON Employees(name, city);
+```
+
+### Unique Index:-
+- Does not allow duplicate values.
+```sql
+CREATE UNIQUE INDEX idx_emp_email
+ON Employees(email);
+```
+
+
 ### Create the Database
 ```sql
 CREATE DATABASE <dbName>;

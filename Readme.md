@@ -220,6 +220,19 @@ CREATE CLUSTERED INDEX idx_employees_id
 ON Employees(id);
 ```
 
+### Nonclustered Index:-
+- Stores index separately from actual table data.
+- One table can have multiple nonclustered indexes.
+
+```sql
+CREATE NONCLUSTERED INDEX idx_tableName_columnName
+ON tableName( columnName );
+
+-- example
+CREATE NONCLUSTERED INDEX idx_employees_name
+ON Employees(name);
+```
+
 
 ### Create the Database
 ```sql

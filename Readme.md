@@ -172,6 +172,17 @@ Id INT IDENTITY(1,1)
 
 - Instead of scanning the entire table, SQL Server uses the index to quickly locate required rows.
 
+### Advantages Index:-
+- Faster `SELECT` queries
+- Improves `WHERE`, `JOIN`, `ORDER BY`
+- Reduces table scan
+- Better query performance
+
+### Limitations Index:-
+- Takes extra storage space
+- `INSERT`, `UPDATE`, `DELETE` become slower
+- Too many indexes reduce performance
+
 
 ### Create the Database
 ```sql
